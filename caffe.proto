@@ -925,14 +925,17 @@ message PadParameter {
   // - `pad` to set the width of the padding. It's the same for all four sides.
   enum PadType {
     ZERO = 0;
-    REPLICATE = 1;
-    REFLECT = 2;
-    REFLECT_101 = 3;
+    //REPLICATE = 1;
+    //REFLECT = 2;
+    //REFLECT_101 = 3;
     // ODD = 4;
     // ODD_101 = 5;
   }
   optional PadType type = 1 [default = ZERO]; // The padding method
-  optional uint32 pad = 2 [default = 0]; // Width of padding
+  optional uint32 pad_l = 2 [default = 0]; // Width of pad left
+  optional uint32 pad_r = 3 [default = 0]; // Width of pad right
+  optional uint32 pad_t = 4 [default = 0]; // Width of pad top
+  optional uint32 pad_b = 5 [default = 0]; // Width of pad bottom
 }
 
 message ParameterParameter {

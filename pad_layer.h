@@ -67,7 +67,10 @@ namespace caffe {
 			const vector<bool>& propagate_down, const vector<Blob<Dtype>*>& bottom);
 
 		PadParameter_PadType PAD_TYPE_;
-		unsigned int PAD_;
+		unsigned int PAD_L_;
+		unsigned int PAD_R_;
+		unsigned int PAD_T_;
+		unsigned int PAD_B_;
 		int NUM_;
 		int CHANNEL_;
 		int HEIGHT_IN_;
